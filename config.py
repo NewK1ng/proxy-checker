@@ -3,18 +3,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-_USERNAME_COUNTRY = os.getenv("USERNAME_COUNTRY")
-_USERNAME_STATE = os.getenv("USERNAME_STATE")
-_USERNAME_CITY = os.getenv("USERNAME_CITY")
-PASSWORD = os.getenv("PASSWORD")
-IP = os.getenv("IP")
-PORT = os.getenv("PORT")
+_COUNTRY_PROXY = os.getenv("COUNTRY_PROXY")
+_REGION_PROXY = os.getenv("REGION_PROXY")
+_CITY_PROXY = os.getenv("CITY_PROXY")
 
-def get_username_country(country):
-    return _USERNAME_COUNTRY.format(country=country)
 
-def get_username_state(country, state):
-    return _USERNAME_STATE.format(country=country, state=state)
+def get_city_proxy(country, city):
+    return _CITY_PROXY.format(country=country, city=city)
 
-def get_username_city(country, city):
-    return _USERNAME_CITY.format(country=country, city=city)
+
+def get_region_proxy(country, region):
+    return _REGION_PROXY.format(country=country, state=region)
+
+
+def get_country_proxy(country):
+    return _COUNTRY_PROXY.format(country=country)
